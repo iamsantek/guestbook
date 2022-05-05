@@ -30,6 +30,10 @@ const config: HardhatUserConfig = {
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
+    rinkeby: {
+      url: process.env.NODE_API_URL,
+      accounts: [process.env.RINKEBY_PRIVATE_KEY as string],
+    },
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,
