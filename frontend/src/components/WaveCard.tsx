@@ -1,4 +1,4 @@
-import { Avatar, Box, Flex, Heading, Spacer, Text } from "@chakra-ui/react";
+import { Avatar, Box, Flex, Spacer, Text } from "@chakra-ui/react";
 import { Wave } from "./Body";
 import { AvatarGenerator } from "random-avatar-generator";
 

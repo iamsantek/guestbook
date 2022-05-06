@@ -9,7 +9,7 @@ export default function useContract() {
   let contract;
 
   if (ethereum) {
-    const provider = new ethers.providers.Web3Provider(ethereum);
+    const provider = new ethers.providers.Web3Provider(ethereum as ethers.providers.ExternalProvider);
     const signer = provider.getSigner();
     contract = new ethers.Contract(CONTRACT_ADDRESS, abi, signer);
   }

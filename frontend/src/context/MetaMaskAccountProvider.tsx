@@ -4,7 +4,7 @@ import { Maybe } from "@metamask/providers/dist/utils";
 import { ethers } from "ethers";
 
 interface MetaMaskContext {
-  ethereum: ethers.providers.ExternalProvider | undefined;
+  ethereum: ethers.providers.ExternalProvider | MetaMaskInpageProvider | undefined;
   connectedAccount: string | undefined;
   connectAccount: () => Promise<void>;
 }
@@ -12,6 +12,7 @@ interface MetaMaskContext {
 const MetaMaskAccountContext = createContext<MetaMaskContext>({
   ethereum: undefined,
   connectedAccount: undefined,
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   connectAccount: async () => {},
 });
 
