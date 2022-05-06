@@ -18,7 +18,6 @@ export const Body = () => {
 
   const getAllWaves = async () => {
     try {
-      const { ethereum } = window;
       if (ethereum) {
         /*
          * Call the getAllWaves method from your Smart Contract
