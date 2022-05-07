@@ -1,46 +1,28 @@
-# Advanced Sample Hardhat Project
+# Keyboards dispenser
 
-This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
+This project is part of the [Builder Space](https://buildspace.so/) web3 development path. Just for learning purposes, only works on Rinkeby network.
 
-The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
+## Stack
+**Front**: React + Next.js   
+**Web3**: Hardhat + AlchemyAPI + Solidity
 
-Try running some of the following tasks:
+## Demo
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-npx hardhat help
-REPORT_GAS=true npx hardhat test
-npx hardhat coverage
-npx hardhat run scripts/deploy.ts
-TS_NODE_FILES=true npx ts-node scripts/deploy.ts
-npx eslint '**/*.{js,ts}'
-npx eslint '**/*.{js,ts}' --fix
-npx prettier '**/*.{json,sol,md}' --check
-npx prettier '**/*.{json,sol,md}' --write
-npx solhint 'contracts/**/*.sol'
-npx solhint 'contracts/**/*.sol' --fix
+The demo is available [here](https://guestbook.santek.dev/).
+
+## Requirements
+
+You need to provide an HTTP endpoint to [AlchemyAPI](https://alchemy.com/?r=DI5MzQ2Nzg2NzA2O) or other web3 platform, and a private Ethereum key to interact with the smart contract.
+
+```bash
+1. Create a .env file in the root directory of the project with the following variables:
+export NODE_API_URL=<YOUR_ALCHEMY_API_ENDPOINT>
+export RINKEBY_PRIVATE_KEY=<YOUR_PRIVATE_ETHEREUM_KEY>
+2. $ source .env
 ```
+## How to run locally
 
-# Etherscan verification
-
-To try out Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan, such as Ropsten.
-
-In this project, copy the .env.example file to a file named .env, and then edit it to fill in the details. Enter your Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
-
-```shell
-hardhat run --network ropsten scripts/deploy.ts
+```bash
+$ yarn
+$ yarn dev
 ```
-
-Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
-
-```shell
-npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
-```
-
-# Performance optimizations
-
-For faster runs of your tests and scripts, consider skipping ts-node's type checking by setting the environment variable `TS_NODE_TRANSPILE_ONLY` to `1` in hardhat's environment. For more details see [the documentation](https://hardhat.org/guides/typescript.html#performance-optimizations).
