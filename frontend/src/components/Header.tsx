@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <Flex p={8} minWidth="max-content" alignItems="center" gap="2">
       <Box p="2">
-        <Heading color="whiteAlpha.900">Wave Portal</Heading>
+        <Heading color="whiteAlpha.900">Santek Guestbook</Heading>
       </Box>
       <Spacer />
       <ButtonGroup>

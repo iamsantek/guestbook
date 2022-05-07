@@ -1,5 +1,5 @@
 import { Skeleton } from "@chakra-ui/react";
-import { WaveCard } from "./WaveCard";
+import WaveCard from "./WaveCard";
 
 export const WaveCardPlaceholder = () => {
   return (

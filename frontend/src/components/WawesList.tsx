@@ -1,5 +1,5 @@
 import { Wave } from "./Body";
-import { WaveCard } from "./WaveCard";
+import WaveCard from "./WaveCard";
 import { WaveCardPlaceholder } from "./WaveCardPlaceholder";
 
 interface Props {
