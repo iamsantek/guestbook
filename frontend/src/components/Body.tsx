@@ -29,11 +29,6 @@ export const Body = () => {
          */
         const waves: any = await wavePortalContract?.getAllWaves();
 
-        /*
-         * We only need address, timestamp, and message in our UI so let's
-         * pick those out
-         */
-        console.log({ waves });
         const wavesCleaned: Wave[] = [];
         waves?.forEach((wave: any) => {
           wavesCleaned.push({
@@ -64,16 +59,12 @@ export const Body = () => {
           throw new Error("No contract found");
         }
 
-        const count = await wavePortalContract.getTotalWaves();
-        console.log("Retrieved total wave count...", count.toNumber());
-
         const waveTxn = await wavePortalContract.wave(
-          "Hello World",
+          message,
           { gasLimit: 300000 }
         );
 
         setIsMining(true);
-        console.log("Mining...", waveTxn.hash);
 
         await waveTxn.wait();
         setIsMining(false);
