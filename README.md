@@ -1,4 +1,4 @@
-# Keyboards dispenser
+# Guestbook app
 
 This project is part of the [Builder Space](https://buildspace.so/) web3 development path. Just for learning purposes, only works on Rinkeby network.
 
