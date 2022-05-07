@@ -6,7 +6,7 @@ import { Footer } from "./components/Footer";
 
 function App() {
   return (
-    <Box bgGradient="linear(to-l, #7928CA, #FF0080)">
+    <Box>
       <Header />
       <Center>
         <Stack p={10}>

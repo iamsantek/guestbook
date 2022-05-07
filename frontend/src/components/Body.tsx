@@ -113,6 +113,10 @@ export const Body = () => {
     getAllWaves();
   }, [ethereum]);
 
+  if (!ethereum) {
+    return <Text mb={5} fontWeight='bold' color='red.100'>Please install MetaMask to connect to this site</Text>
+  }
+
   return (
     <>
       {!connectedAccount && <Center><Text mb={5} fontWeight='bold' color='red.100'>Connect your MetaMask wallet to the Rinkeby network and left a message!</Text></Center>}
