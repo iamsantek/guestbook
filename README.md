@@ -26,7 +26,7 @@ export RINKEBY_PRIVATE_KEY=<YOUR_PRIVATE_ETHEREUM_KEY>
 hardhat run script/deploy.ts --network rinkeby
 ```
 4. Copy the printed address to the src/contants.ts file.
-5. Copy the WavePortal.sol file to src/utils/WavePortal.sol
+5. Copy the artifacts/contracts/WavePortal.json file to frontend/src/utils/WavePortal.sol
 
 ## How to run locally
 
