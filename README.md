@@ -14,12 +14,20 @@ The demo is available [here](https://guestbook.santek.dev/).
 
 You need to provide an HTTP endpoint to [AlchemyAPI](https://alchemy.com/?r=DI5MzQ2Nzg2NzA2O) or other web3 platform, and a private Ethereum key to interact with the smart contract.
 
-```bash
+
 1. Create a .env file in the root directory of the project with the following variables:
+```bash
 export NODE_API_URL=<YOUR_ALCHEMY_API_ENDPOINT>
 export RINKEBY_PRIVATE_KEY=<YOUR_PRIVATE_ETHEREUM_KEY>
-2. $ source .env
 ```
+2. Run ```$ source .env```
+3. Install hardhat and run the following command:
+```
+hardhat run script/deploy.ts --network rinkeby
+```
+4. Copy the printed address to the src/contants.ts file.
+5. Copy the WavePortal.sol file to src/utils/WavePortal.sol
+
 ## How to run locally
 
 ```bash
