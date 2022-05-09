@@ -2,9 +2,7 @@ import hre from "hardhat";
 
 const main = async () => {
   const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
-  const waveContract = await waveContractFactory.deploy({
-    value: hre.ethers.utils.parseEther("0.001"),
-  } as any);
+  const waveContract = await waveContractFactory.deploy();
 
   await waveContract.deployed();
 
